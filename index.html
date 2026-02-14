@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA: El Viaje del Pensamiento Máquina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #38bdf8;
+        }
+        body {
+            background-color: #020617;
+            color: #f8fafc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .timeline-line {
+            position: absolute;
+            left: 20px;
+            width: 2px;
+            background: linear-gradient(to bottom, #38bdf8, #818cf8, #c084fc);
+            z-index: 0;
+            height: 100%;
+        }
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; transform: translateX(-50%); }
+        }
+        .milestone-dot {
+            width: 16px;
+            height: 16px;
+            background: #38bdf8;
+            border-radius: 50%;
+            z-index: 10;
+            box-shadow: 0 0 10px #38bdf8;
+        }
+        .hidden-section { display: none; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-16 animate__animated animate__fadeInDown">
+            <h1 class="text-4xl md:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-purple-500">
+                Mira como evoluciona la IA
+            </h1>
+            <p class="text-white text-lg max-w-4xl mx-auto italic">
+                "La pregunta no es si las máquinas pueden pensar, sino si nosotros podemos reconocer su inteligencia."
+            </p>
+        </header>
+
+        <!-- SECCIÓN 1: NARRATIVA CRONOLÓGICA -->
+        <section id="narrative-section" class="relative space-y-16 mb-20">
+            <div class="timeline-line"></div>
+
+            <!-- 1950 -->
+            <div class="relative flex flex-col md:flex-row items-center md:justify-between w-full">
+                <div class="md:w-5/12 mb-4 md:mb-0">
+                    <div class="glass-card p-6 rounded-2xl animate__animated animate__fadeInLeft">
+                        <span class="text-sky-600 font-bold text-5xl">1950</span>
+                        <h2 class="text-4xl font-bold text-white mb-2">El Origen del Sueño</h2>
+                        <p class="text-sm text-white leading-relaxed">
+                            Alan Turing publica "Computing Machinery and Intelligence". En plena posguerra, Turing no solo imaginó computadoras, sino mentes. Su <strong>Test de Turing</strong> propuso que si no puedes distinguir a una máquina de un humano en una charla, la máquina es "inteligente". Fue el primer paso filosófico y técnico.
+                        </p>
+                    </div>
+                </div>
+                <div class="milestone-dot hidden md:block"></div>
+                <div class="md:w-5/12"></div>
+            </div>
+
+            <!-- 1966 -->
+            <div class="relative flex flex-col md:flex-row items-center md:justify-between w-full">
+                <div class="md:w-5/12"></div>
+                <div class="milestone-dot hidden md:block"></div>
+                <div class="md:w-5/12 mt-4 md:mt-0">
+                    <div class="glass-card p-6 rounded-2xl animate__animated animate__fadeInRight">
+                       <span class="text-sky-600 font-bold text-5xl">1966</span>
+                        <h2 class="text-2xl font-bold text-white mb-2">ELIZA: El Espejo Digital</h2>
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            En el MIT, Joseph Weizenbaum creó a <strong>ELIZA</strong>. Fue el primer "chatbot". Simulaba ser una psicoterapeuta rogueriana. Aunque solo aplicaba reglas gramaticales simples y repetía tus frases, los usuarios empezaron a confiarle sus secretos. La IA demostró que el lenguaje era la llave de la empatía artificial.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1997 -->
+            <div class="relative flex flex-col md:flex-row items-center md:justify-between w-full">
+                <div class="md:w-5/12 mb-4 md:mb-0">
+                    <div class="glass-card p-6 rounded-2xl animate__animated animate__fadeInLeft">
+                        <span class="text-sky-600 font-bold text-5xl">1997</span>
+                        <h2 class="text-2xl font-bold text-white mb-2">Cómputo Bruto vs Genio Humano</h2>
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            La supercomputadora <strong>Deep Blue</strong> de IBM desafió a Garry Kasparov, el mejor ajedrecista de la historia. Al vencerlo, el mundo entendió que la lógica pura y el procesamiento masivo de datos podían superar la intuición humana en dominios cerrados. La IA ya no era solo un juguete académico.
+                        </p>
+                    </div>
+                </div>
+                <div class="milestone-dot hidden md:block"></div>
+                <div class="md:w-5/12"></div>
+            </div>
+
+            <!-- 2012 -->
+            <div class="relative flex flex-col md:flex-row items-center md:justify-between w-full">
+                <div class="md:w-5/12"></div>
+                <div class="milestone-dot hidden md:block"></div>
+                <div class="md:w-5/12 mt-4 md:mt-0">
+                    <div class="glass-card p-6 rounded-2xl animate__animated animate__fadeInRight">
+                        <span class="text-sky-600 font-bold text-5xl">2012</span>
+                        <h2 class="text-2xl font-bold text-white mb-2">El Aprendizaje Profundo</h2>
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            Gracias al <strong>Deep Learning</strong> (Aprendizaje Profundo) y las redes neuronales artificiales, las máquinas aprendieron a "ver". Con el experimento AlexNet, la IA superó a los humanos reconociendo objetos en imágenes. Las máquinas dejaron de seguir reglas para empezar a aprender de los ejemplos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HOY -->
+            <div class="relative flex flex-col md:flex-row items-center md:justify-between w-full">
+                <div class="md:w-5/12 mb-4 md:mb-0">
+                    <div class="glass-card p-6 rounded-2xl animate__animated animate__fadeInLeft">
+                        <span class="text-sky-600 font-bold text-5xl">ACTUALIDAD</span>
+                        <h2 class="text-2xl font-bold text-white mb-2">La Era Generativa</h2>
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            Llegamos a los Modelos de Lenguaje Extensos (como ChatGPT) y la <strong>IA Generativa</strong>. Ya no solo analizan datos; crean poemas, arte y código. La IA se ha convertido en un co-piloto creativo, planteando nuevos retos sobre la autoría y la verdad en el mundo digital.
+                        </p>
+                    </div>
+                </div>
+                <div class="milestone-dot hidden md:block"></div>
+                <div class="md:w-5/12"></div>
+            </div>
+        </section>
+
+        <!-- BOTÓN DE PASO AL JUEGO -->
+        <div class="text-center py-10" id="btn-unlock-container">
+            <button onclick="showRiddleSection()" class="px-10 py-4 bg-gradient-to-r from-sky-500 to-indigo-600 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-lg shadow-sky-500/20">
+                ¡ESTAS PREPARADO PARA ADIVINAR Y ACERTAR ?
+            </button>
+        </div>
+
+        <!-- SECCIÓN 2: Adivina historiador de la IA -->
+        <section id="riddle-section" class="hidden-section pb-32">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-black mb-2">El Salón del adivinador</h2>
+                <p class="text-gray-400">Demuestra que has prestado atención resolviendo estas 5 adivinanzas.</p>
+            </div>
+
+            <div id="riddle-container" class="space-y-6">
+                <!-- Los enigmas se cargan dinámicamente aquí para mantener orden -->
+            </div>
+
+            <!-- Pantalla Final -->
+            <div id="final-screen" class="hidden-section text-center p-12 glass-card rounded-3xl animate__animated animate__zoomIn mt-10">
+                <h2 class="text-4xl font-bold text-sky-400 mb-4">¡Maestro de la Historia!</h2>
+                <p class="text-xl text-gray-300 mb-6">Has completado el viaje y descifrado todos los códigos de la IA.</p>
+                <button onclick="location.reload()" class="px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition">Reiniciar Todo</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const challengeData = [
+            {
+                era: "1950",
+                riddle: "No soy una persona, pero puedo engañar al juez. Si no sabes quién soy tras una charla, mi prueba has pasado. ¿Cómo se llama este examen?",
+                answer: "test de turing",
+                hints: ["Lleva el apellido del matemático británico.", "T... de Turing."],
+                context: "Turing propuso esto en su artículo de 1950."
+            },
+            {
+                era: "1966",
+                riddle: "Te escucho con paciencia, pero solo repito lo que dices. Fui la primera de mi especie en simular una psicóloga. Mi nombre rima con una reina de Egipto. ¿Quién soy?",
+                answer: "eliza",
+                hints: ["Empieza con E.", "Su nombre es E_I_A."],
+                context: "Fue el primer chatbot de la historia."
+            },
+            {
+                era: "1997",
+                riddle: "Tengo reyes y reinas, pero no corona. Mi mente calcula millones de jugadas por segundo para vencer al campeón Kasparov. ¿Cómo me llamo?",
+                answer: "deep blue",
+                hints: ["Significa 'Azul Profundo'.", "Creada por IBM."],
+                context: "Venció al campeón mundial de ajedrez."
+            },
+            {
+                era: "2012",
+                riddle: "Imito las conexiones de tu cerebro para aprender sin que me den reglas fijas. Cuantas más capas tengo, más 'profundo' aprendo. ¿Qué tipo de red soy?",
+                answer: "neuronal",
+                hints: ["Relacionado con las neuronas.", "Redes _____ Artificiales."],
+                context: "Es la base del aprendizaje profundo."
+            },
+            {
+                era: "ACTUALIDAD",
+                riddle: "Dime una idea y yo haré el poema. No solo busco datos, los invento basándome en lo que aprendí. Soy la IA de tipo...",
+                answer: "generativa",
+                hints: ["Viene de la palabra 'generar'.", "La 'G' en ChatGPT."],
+                context: "Es la tecnología que crea contenido nuevo."
+            }
+        ];
+
+        let currentRiddleIndex = 0;
+        let attempts = 3;
+
+        function showRiddleSection() {
+            document.getElementById('narrative-section').classList.add('animate__animated', 'animate__fadeOut');
+            setTimeout(() => {
+                document.getElementById('narrative-section').style.display = 'none';
+                document.getElementById('btn-unlock-container').style.display = 'none';
+                document.getElementById('riddle-section').style.display = 'block';
+                renderRiddle();
+            }, 500);
+        }
+
+        function renderRiddle() {
+            const container = document.getElementById('riddle-container');
+            const data = challengeData[currentRiddleIndex];
+            
+            container.innerHTML = `
+                <div class="glass-card p-8 rounded-3xl border-l-4 border-amber-500 animate__animated animate__fadeInUp">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-xl font-bold uppercase">${data.era}</span>
+                        <span class="text-gray-500 text-sm">Enigma ${currentRiddleIndex + 1} de 5</span>
+                    </div>
+                    <p class="text-xl md:text-2xl italic text-white mb-6">"${data.riddle}"</p>
+                    
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <input type="text" id="user-input" placeholder="Escribe aquí..." class="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-amber-500 transition">
+                        <button onclick="checkAnswer()" class="bg-amber-500 hover:bg-amber-400 text-black font-bold px-8 py-3 rounded-xl transition">Comprobar</button>
+                    </div>
+                    
+                    <div id="feedback-area" class="mt-4">
+                        <p class="text-sm text-gray-400">Intentos disponibles: <span id="attempts-count" class="font-bold">${attempts}</span></p>
+                        <p id="hint-text" class="text-sm text-amber-300 mt-2 italic hidden"></p>
+                    </div>
+                </div>
+            `;
+            
+            // Focus input automatically
+            document.getElementById('user-input').focus();
+            // Allow enter key
+            document.getElementById('user-input').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') checkAnswer();
+            });
+        }
+
+        function checkAnswer() {
+            const input = document.getElementById('user-input');
+            const val = input.value.toLowerCase().trim();
+            const correct = challengeData[currentRiddleIndex].answer;
+            const hintDisplay = document.getElementById('hint-text');
+            
+            if (val.includes(correct)) {
+                success();
+            } else {
+                fail();
+            }
+        }
+
+        function success() {
+            const container = document.getElementById('riddle-container');
+            container.innerHTML = `
+                <div class="glass-card p-8 rounded-3xl border-l-4 border-green-500 text-center animate__animated animate__bounceIn">
+                    <h3 class="text-2xl font-bold text-green-400 mb-2">¡Correcto!</h3>
+                    <p class="text-gray-300 mb-6">${challengeData[currentRiddleIndex].context}</p>
+                    <button onclick="nextStep()" class="px-8 py-3 bg-green-600 rounded-xl font-bold hover:bg-green-500 transition">Continuar</button>
+                </div>
+            `;
+        }
+
+        function fail() {
+            attempts--;
+            const count = document.getElementById('attempts-count');
+            const hintDisplay = document.getElementById('hint-text');
+            const input = document.getElementById('user-input');
+
+            if (attempts > 0) {
+                count.innerText = attempts;
+                hintDisplay.classList.remove('hidden');
+                // Mostrar pista según el intento
+                const hints = challengeData[currentRiddleIndex].hints;
+                hintDisplay.innerText = "Pista: " + (attempts === 2 ? hints[0] : hints[1]);
+                
+                input.classList.add('animate__animated', 'animate__shakeX', 'border-red-500');
+                setTimeout(() => input.classList.remove('animate__animated', 'animate__shakeX', 'border-red-500'), 1000);
+            } else {
+                // Revelar respuesta
+                const container = document.getElementById('riddle-container');
+                container.innerHTML = `
+                    <div class="glass-card p-8 rounded-3xl border-l-4 border-red-500 text-center animate__animated animate__fadeIn">
+                        <h3 class="text-2xl font-bold text-red-400 mb-2">Se agotaron los intentos</h3>
+                        <p class="text-gray-300 mb-2">La respuesta era: <span class="font-bold text-white uppercase">${challengeData[currentRiddleIndex].answer}</span></p>
+                        <p class="text-sm text-gray-400 mb-6">${challengeData[currentRiddleIndex].context}</p>
+                        <button onclick="nextStep()" class="px-8 py-3 bg-slate-700 rounded-xl font-bold hover:bg-slate-600 transition">Seguir adelante</button>
+                    </div>
+                `;
+            }
+        }
+
+        function nextStep() {
+            currentRiddleIndex++;
+            attempts = 3;
+            if (currentRiddleIndex < challengeData.length) {
+                renderRiddle();
+            } else {
+                document.getElementById('riddle-container').style.display = 'none';
+                document.getElementById('final-screen').style.display = 'block';
+                document.getElementById('final-screen').scrollIntoView();
+            }
+        }
+    </script>
+</body>
+</html>
